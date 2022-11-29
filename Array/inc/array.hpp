@@ -11,14 +11,14 @@ template <typename X> class Array{
         ~Array();
         Array(const Array &other);
         Array& operator=(const Array<X> &);
-        int& operator[](int);
+        X& operator[](int);
         
         void show();
         int size();
         
 };
 
-template<typename X> int& Array<X>::operator[](int index)
+template<typename X> X& Array<X>::operator[](int index)
 {
     if (index >= SIZE || index < 0) {
         std::cout << "Array index out of bound, exiting"<<std::endl;
